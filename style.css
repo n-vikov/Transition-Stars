@@ -1,0 +1,117 @@
+
+
+
+:root{
+    --background-color: red ; 
+}
+
+body{
+    background: #000;
+}
+
+     ---TRANSITIONS---
+.container{
+    padding: 20px 5px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.caja{
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    transition-property: left, background;
+    transition-duration: 2s, 2s;
+    margin: 30px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    position: relative;
+    left: 0;
+    
+
+}
+
+.container:hover > .caja{
+    left: 80%;
+    --background-color: #fff;
+    background-color: var(--background-color);
+
+}
+
+.caja:first-child{
+
+    transition-timing-function: linear ;
+    
+}
+.caja:nth-child(2){
+    transition-timing-function: ease;
+    --background-color: #07f;
+    background-color: var(--background-color);
+}
+
+.caja:nth-child(3){
+    --background-color: #06f;
+    background-color: var(--background-color);
+    transition-timing-function:ease-in;
+}
+
+.caja:nth-child(4){
+    --background-color: #05f;
+    background-color: var(--background-color);
+    transition-timing-function:ease-out;
+}
+
+.caja:nth-child(5){
+    --background-color: #04f;
+    background-color: var(--background-color);
+    transition-timing-function:ease-in-out;
+}
+
+/*
+.container{
+    padding: 20px 5px;
+}
+
+.caja{
+    background-color:#fff;
+    height: 100px;
+    width: 300px;
+    margin: 30px;
+    position: relative;
+    animation-name: desplazarse;
+    animation-duration: .1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+}
+
+@keyframes desplazarse {
+    0%{
+        left: 0;
+        background: pink;
+    }
+
+    25%{
+        background: #f09;
+    }
+
+    50%{
+        background: violet;
+    }
+
+    75%{ 
+        background: #f07;
+    }
+
+    95%{
+        background: #f06;
+    }
+
+    100%{
+        left: 80%;
+        background: #f0f;
+    }
+}
+
+*/
